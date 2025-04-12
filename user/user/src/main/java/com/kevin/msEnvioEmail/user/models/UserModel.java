@@ -1,10 +1,6 @@
 package com.kevin.msEnvioEmail.user.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Table;
-import org.springframework.data.annotation.Id;
+import jakarta.persistence.*;
 
 import java.io.Serializable;
 import java.util.UUID;
@@ -15,7 +11,7 @@ public class UserModel implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID userId;
     private String name;
     private String email;
